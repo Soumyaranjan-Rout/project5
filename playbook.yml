@@ -3,6 +3,7 @@
   host : 
     - 172.31.92.138
   become : true
+  connection : ssh
   tasks :
     - name : package update
       command : apt update
