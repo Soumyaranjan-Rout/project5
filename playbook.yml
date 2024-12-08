@@ -1,0 +1,12 @@
+---
+- name : ansible palaybook for docker
+  host : 
+    - 172.31.92.138
+  become : true
+  tasks :
+    - name : package update
+      command : apt update
+    - name : docker imstall
+      command : apt install docker.io -y
+    - name : docker container create
+      command : docker run -d -p 9090:8080 --name app01 soumyaranjanrout0/project5
